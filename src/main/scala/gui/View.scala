@@ -44,7 +44,7 @@ object view extends SwingApplication {
       case object incButton extends fontAdjust("放大") 
       case object decButton extends fontAdjust("缩小")
 
-      val bookSelection = new ComboBox(List("论语", "菜根谭", "增广贤文"))
+      val bookSelection = new ComboBox(config.availableBookTitles())
 
       case object confirmationLabel extends Label {
         name = "确认保存"
