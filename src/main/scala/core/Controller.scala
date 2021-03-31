@@ -31,7 +31,7 @@ class Controller() {
   // API for the GUI. Return a random sentence. If chapter specified, then select from the chapter 
   def getSentence(): String = {
       this.randomElement(this.sentences) match {
-        case None => "无可预览内容!"
+        case None => "无可预览内容"
         case Some(x) => x 
       }
     }
