@@ -38,7 +38,7 @@ class saveAsImage(text: String,
     val canvas: BufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB)
 
     val g: Graphics2D = canvas.createGraphics()
-    g.setColor(Color.WHITE)
+    g.setColor(Color.BLACK)
     g.fillRect(0, 0, canvas.getWidth, canvas.getHeight)
     g.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON)
 
@@ -50,7 +50,7 @@ class saveAsImage(text: String,
     val x: Int = (width - r.getWidth().toInt) / 2
     val y: Int = (height - r.getHeight().toInt) / 2 + fm.getAscent()
 
-    g.setColor(Color.BLACK)
+    g.setColor(Color.WHITE)
     g.drawString(text, x, y)
     g.dispose()
     
