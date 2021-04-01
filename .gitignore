@@ -4,4 +4,7 @@ target/
 .metals/
 .vscode/
 project/*
+*/.DS_Store
 
+# project specific 
+src/main/scala/img/saved/*
