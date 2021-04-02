@@ -12,6 +12,6 @@ object config {
   def availableBookTitles(): List[String] = {
     val d = new File(s"${currentPath}/src/main/scala/texts")
     assert(d.exists())
-    d.listFiles().filter(_.isFile).toList.map(x => x.getName().split("\\.").head)
+    d.listFiles().filter(_.isFile).toList.map(x => x.getName().split("\\.").head).filterNot(_.isEmpty)
   }
 }
