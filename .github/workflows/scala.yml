@@ -11,6 +11,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      DISPLAY: 0.0
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 8
