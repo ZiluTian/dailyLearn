@@ -21,7 +21,7 @@ import scala.swing.TextArea
 class saveAsImage(text: String, 
                   imgName: String) {
 
-  val genImgPath: String = s"${config.currentPath}/src/main/scala/img"
+  val genImgPath: String = getClass().getResource("/img").getPath()
   
   val screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 

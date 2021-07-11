@@ -10,7 +10,7 @@ class Controller() {
   // If has been initialized with , skip
   def init(bookname: String): Unit = {
     if (title != bookname) {
-      val p: parser = new parser(config.fileName(bookname))
+      val p: parser = new parser(bookname)
       this.title = bookname
       this.sentences = p.run()
     }

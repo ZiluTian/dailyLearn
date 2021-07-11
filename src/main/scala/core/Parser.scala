@@ -15,7 +15,7 @@ class parser(filename: String) {
     
     val continueSym: List[Char] = List('，', '；')
 
-    for (line <- Source.fromFile(filename).getLines()){
+    for (line <- Source.fromResource(s"texts/${filename}.txt").getLines()){
         if (!line.isEmpty) {
           val tmp = line.split("\\s+").mkString
 
