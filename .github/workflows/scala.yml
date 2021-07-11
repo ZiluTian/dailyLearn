@@ -19,8 +19,8 @@ jobs:
           # - {os: ubuntu-latest,   r: 'release'}
           - {os: macOS-latest,   r: 'release'}
 
-    env:
-      export DISPLAY=localhost:0.0
+    # env:
+    #   export DISPLAY=localhost:0.0
 
     steps:
     - uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
     - name: Install X11 dependencies
-      if runner.os == 'macOS'
+      if: runner.os == 'macOS'
       run: |
         brew install xquartz --cask
 
