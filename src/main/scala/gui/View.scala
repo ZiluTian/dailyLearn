@@ -23,8 +23,19 @@ object view extends SwingApplication {
       title = "乐读经典"
 
       reactions += {
-        case WindowClosing(e) => System.exit(0)
+        case WindowClosing(e) => showCloseDialog()
       }
+
+      private def showCloseDialog() {
+        Dialog.showConfirmation(parent = null,
+          title = "Exit",
+          message = "确认要退出么?"
+        ) match {
+          case Dialog.Result.Ok => JFrame.EXIT_ON_CLOSE
+          case _ => ()
+        }
+      }
+
 
       class greyButton(val text0: String) extends Button(text0) {
         background = LIGHT_GRAY
